@@ -110,8 +110,14 @@ To set up and run this project, follow these steps:
 - **X** - Quit/Exit Game
 
 ## Screenshots
+<img width="1489" height="768" alt="image2" src="https://github.com/user-attachments/assets/80eb8a71-f6fc-4eae-be86-3a75ba647a70" />
+<img width="1487" height="768" alt="image9" src="https://github.com/user-attachments/assets/af5c29b5-21b9-493f-b2e2-618088c7e7f1" />
+<img width="1490" height="768" alt="image20" src="https://github.com/user-attachments/assets/23faac0e-0ad2-47db-9a37-74705c54ef40" />
+<img width="1486" height="766" alt="image23" src="https://github.com/user-attachments/assets/b45fda79-7ce9-44d4-a37f-ce25fbc96606" />
+<img width="1486" height="766" alt="image17" src="https://github.com/user-attachments/assets/c51fffb1-bf45-483d-8cee-09454a9b7efc" />
+<img width="1492" height="769" alt="image4" src="https://github.com/user-attachments/assets/3943df3f-da6c-4772-b4c5-093744d0a263" />
 
-*(Screenshots will be added here)*
+
 
 ## Project Structure
 
