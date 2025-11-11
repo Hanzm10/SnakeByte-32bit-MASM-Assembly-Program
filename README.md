@@ -11,29 +11,74 @@ The game is built using:
 
 This project is a modified version of the [Snake Game Assembly Language](https://github.com/meixinchoy/Snake-Game-Assembly-Language) repository by meixinchoy, enhanced with additional features and improvements.
 
-## Game Features
+## Features and Functions
 
-- Classic snake gameplay with WASD controls
-- Dynamic speed increase as the game progresses
-- Score tracking system
-- Hazard blocks for added difficulty
+The game includes the following core features implemented through various assembly procedures:
+
+### Core Gameplay Functions
+- **DrawWall** - Renders the game boundaries in red
+- **DrawPlayer** - Displays the snake at current position
+- **UpdatePlayer** - Erases the snake from old position before redrawing
+- **DrawCoin** - Renders the collectible coin on the game board
+- **CreateRandomCoin** - Generates random positions for coins
+- **EatingCoin** - Handles coin collection, score increment, and snake growth
+- **DrawBody** - Renders the snake's body segments
+- **CheckSnake** - Detects self-collision (snake hitting its own body)
+
+### Scoring and Display
+- **DrawScoreboard** - Displays the game title "SNAKEBYTE" and current score
+- **ShowSpeed** - Shows current speed level on the scoreboard
+- **UpdateSpeed** - Dynamically increases game speed every 3 points
+
+### Hazard System
+- **MaybeSpawnHazardBlock** - Spawns hazard blocks at score milestones
+- **CreateRandomHazardBlock** - Generates random hazard block positions
+- **CreateMidpointHazardBlock** - Creates hazard blocks between snake and coin
+- **CreateBetweenOrRandomHazardBlock** - Hybrid hazard placement strategy
+- **DrawHazardAt** - Renders hazard blocks on the game board
+- **ClearHazardAt** - Removes hazard blocks from the display
+- **CheckBlockCollision** - Detects collision between snake head and hazard blocks
+
+### Game Over Handling
+- **YouDiedWall** - Handles death by wall collision
+- **YouDiedBody** - Handles death by self-collision
+- **YouDiedHazard** - Handles death by hazard collision
+- **FinishedGame** - Displays game completion message
+- **ReinitializeGame** - Resets all game variables for a new game
+
+### Game Features
+- Classic snake gameplay with directional movement
+- Dynamic speed progression (increases every 3 points)
+- Real-time score tracking
+- Multiple hazard blocks spawning every 5 points
 - Wall collision detection
 - Self-collision detection
-- Coin collection mechanics
-- Game over and retry functionality
+- Coin collection mechanics with snake growth
+- Retry functionality after game over
+- Color-coded display (red walls, yellow title, white snake)
 
-## Requirements
+## Setup
 
-To build and run this project, you need:
+To set up and run this project, follow these steps:
 
-1. **Visual Studio 2022** (or compatible version with MASM support)
-2. **Irvine32 Library** - Download and install from [Kip Irvine's website](http://www.asmirvine.com/)
-   - Place the Irvine library files in `C:\Irvine` directory
-3. **Windows Operating System** (32-bit or 64-bit with 32-bit support)
+### Prerequisites
 
-## How to Build and Run
+1. **Install Visual Studio 2022**
+   - Download from [Microsoft's official website](https://visualstudio.microsoft.com/)
+   - During installation, ensure you select "Desktop development with C++" workload
+   - This includes MASM (Microsoft Macro Assembler) support
 
-### Using Visual Studio:
+2. **Install Irvine32 Library**
+   - Download the Irvine32 library from [Kip Irvine's website](http://www.asmirvine.com/)
+   - Extract the library files to `C:\Irvine` directory
+   - The directory should contain files like `Irvine32.lib`, `Irvine32.inc`, etc.
+
+3. **Configure Assembly File in Visual Studio**
+   - For detailed setup instructions, follow this comprehensive tutorial:
+   - **Video Tutorial**: [Setting up MASM in Visual Studio 2022](https://www.youtube.com/watch?v=QJCamuX1Pdg&t=851s)
+   - The video covers project configuration, build customizations, and MASM settings
+
+### Running the Project
 
 1. Clone this repository:
    ```bash
@@ -42,19 +87,31 @@ To build and run this project, you need:
 
 2. Open `SnakeByte_Program.sln` in Visual Studio 2022
 
-3. Ensure the Irvine32 library is properly installed in `C:\Irvine`
+3. Verify the Irvine32 library path in project settings:
+   - Right-click project → Properties
+   - Configuration Properties → Microsoft Macro Assembler → General
+   - Check that Include Paths contains `C:\Irvine`
+   - Configuration Properties → Linker → General
+   - Check that Additional Library Directories contains `C:\Irvine`
 
-4. Build the solution (F7 or Build → Build Solution)
+4. Build the solution:
+   - Press **F7** or go to Build → Build Solution
 
-5. Run the program (F5 or Debug → Start Debugging)
+5. Run the program:
+   - Press **F5** or go to Debug → Start Debugging
+   - Or press **Ctrl+F5** for running without debugging
 
-## Game Controls
+## Controls
 
 - **W** - Move Up
 - **A** - Move Left
 - **S** - Move Down
 - **D** - Move Right
-- **X** - Exit Game
+- **X** - Quit/Exit Game
+
+## Screenshots
+
+*(Screenshots will be added here)*
 
 ## Project Structure
 
